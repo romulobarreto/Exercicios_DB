@@ -5,7 +5,7 @@ def criar_banco():
         cursor = conexao.cursor()
         cursor.execute('''
     CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRYMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     nome TEXT,
     email TEXT,
     senha TEXT)
