@@ -1,4 +1,5 @@
 import sqlite3
+from models.user import User
 
 def chamar_banco():
     conexao = sqlite3.connect('database/system.db')
@@ -22,14 +23,14 @@ class UserDao:
 
 
     @staticmethod
-    def cadastrar_usuario(nome, email, senha):
+    def cadastrar_usuario(user: User):
         # Chama o cursor
         conexao, cursor = chamar_banco()
         # Cadastra a informação no banco
         cursor.execute('''
     INSERT INTO users (nome, email, senha) 
     VALUES (?, ?, ?)''',
-    (nome, email, senha,))
+    (user.nome, user.email, user.senha,))
         conexao.commit()
         conexao.close()
         return True, "\n✅ Dados cadastrados no banco."
