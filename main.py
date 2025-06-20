@@ -27,7 +27,7 @@ def menu():
                         opcao_login = input("\nDigite a opção desejada: ").strip()
 
                         if opcao_login == "1":
-                            UserView.editar_usuario(email_mensagem)
+                            email_mensagem = UserView.editar_usuario(email_mensagem)
                             continue
                         elif opcao_login == "2":
                             UserView.excluir_conta(email_mensagem)
