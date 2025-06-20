@@ -125,17 +125,17 @@ class UserView:
             if opcao == "1":
                 print(mensagem)
                 print(f"Nome editado:\nDe: {usuario_cadastrado.nome.title()}\nPara: {nome.title()}")
-                return
+                return email
 
             elif opcao == "2":
                 print(mensagem)
                 print(f"Email editado:\nDe: {usuario_cadastrado.email}\nPara: {email}")
-                return
+                return email
 
             elif opcao == "3":
                 print(mensagem)
                 print(f"Senha editada.")
-                return
+                return email
         else:
             print(mensagem)
             return
